@@ -47,13 +47,13 @@ npm run dev
 Email:
 
 ```text
-YOUR_DEMO_EMAIL_HERE
+noureddinejarniji@gmail.com
 ```
 
 Password:
 
 ```text
-YOUR_DEMO_PASSWORD_HERE
+zHKAfpe#L94ok&CC
 ```
 
 ## Available commands
