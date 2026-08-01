@@ -44,8 +44,17 @@ npm run dev
 
 ## Demo access
 
-- Email:
-- Password:
+Email:
+
+```text
+YOUR_DEMO_EMAIL_HERE
+```
+
+Password:
+
+```text
+YOUR_DEMO_PASSWORD_HERE
+```
 
 ## Available commands
 
