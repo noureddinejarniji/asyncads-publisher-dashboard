@@ -42,11 +42,10 @@ Start the development server:
 npm run dev
 ```
 
-## Access credentials
+## Demo access
 
-Login emails, passwords, recovery codes, and other credentials must not be committed to this repository or included in this README. Store them in an approved password manager or secret manager and share access only through a private channel.
-
-Rotate any credential immediately if it is exposed in source code, documentation, an issue, or a message.
+- Email:
+- Password:
 
 ## Available commands
 
