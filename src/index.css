@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  /* Numbers & code: distinct digits (slashed zero) and equal-width columns. */
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-canvas: #f6f7f9;
+  --color-surface: #ffffff;
+
+  --color-brand-violet: #7c3aed;
+  --color-brand-fuchsia: #ec4899;
+  --color-brand-amber: #f59e0b;
+
+  /* Flat, square-corner app style: zero the rectangular radius scale.
+     `rounded-full` keeps circular elements (avatar, dots, toggles, pills) round. */
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    background-color: var(--color-canvas);
+    color: #0f172a;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-fuchsia);
+    color: white;
+  }
+}
+
+@layer components {
+  @media (min-width: 640px) {
+    .notifications-panel {
+      position: fixed;
+      left: 50%;
+      right: auto;
+      top: 50%;
+      width: 28rem;
+      max-width: calc(100vw - 3rem);
+      margin-top: 0;
+      border-radius: 1rem;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* Global button ripple (injected by lib/ripple.ts). */
+.ripple-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 9999px;
+  background-color: currentColor;
+  opacity: 0.3;
+  transform: scale(0);
+  animation: ripple 600ms ease-out forwards;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ripple {
+    display: none;
+  }
+}
